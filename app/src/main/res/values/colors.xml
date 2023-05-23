@@ -10,10 +10,10 @@
     <color name="head_text_color">#D9272727</color>
     <color name="g_gray">#E6E6E6</color>
 
-    <color name="shimmer_color">#bfbdbd</color>
-    <color name="shimmer_color_light">#E3E3E3</color>
+    <color name="shimmer_color">#A3A3A3</color>
+    <color name="shimmer_color_light">#C3C3C3</color>
 
-    <color name="background_color">#F4F4F4</color>
+    <color name="background_color">#F2F2F2</color>
     <color name="rv_background">#CC512D39</color>
 
 <!--    <color name="rv_background">#CC2D5E53</color>-->

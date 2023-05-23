@@ -9,6 +9,9 @@ import com.bumptech.glide.Glide
 import com.example.easyfood.databinding.MealItem2Binding
 import com.example.easyfood.databinding.MealItemBinding
 import com.example.easyfood.pojo.Meal
+import com.example.easyfood.pojo.dummyData
+import com.example.easyfood.pojo.numArray
+import kotlin.random.Random
 
 class FavoritesAdapter: RecyclerView.Adapter<FavoritesAdapter.FavoritesViewHolder>() {
 
@@ -54,7 +57,16 @@ class FavoritesAdapter: RecyclerView.Adapter<FavoritesAdapter.FavoritesViewHolde
             .load(meal.strMealThumb)
             .into(holder.binding.imgMeal)
 
-        holder.binding.tvMealName.text = meal.strMeal
+        val rand = Random(10).nextInt(0, 6)
+
+        holder.binding.apply {
+            tvMealName.text = meal.strMeal
+            tvMealRating.text = dummyData[position].rating +" (" + numArray[rand].toString() + ")"
+            tvMealCategory.text = "Category: " + meal.strCategory
+            tvMealArea.text = "Area: " + meal.strArea
+            tvMealTime.text = dummyData[position].time
+        }
+
 
         holder.itemView.setOnClickListener {
             onItemClick.invoke(meal)

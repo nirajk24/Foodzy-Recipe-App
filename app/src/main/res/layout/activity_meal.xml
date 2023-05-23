@@ -22,6 +22,7 @@
             app:expandedTitleTextColor="@color/white"
             app:collapsedTitleTextColor="@color/white"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+
             
             <ImageView
                 android:id="@+id/imgMealDetails"
@@ -88,6 +89,7 @@
                     android:layout_height="wrap_content"
                     android:text="Catgory:Beef"
                     android:textStyle="bold"
+                    android:textSize="@dimen/_13ssp"
                     android:textColor="@color/g_black"
                     android:drawableLeft="@drawable/ic_category"
                     android:drawableTint="@color/g_black"
@@ -99,6 +101,7 @@
                     android:layout_height="wrap_content"
                     android:text="Area:Italy"
                     android:textStyle="bold"
+                    android:textSize="@dimen/_13ssp"
                     android:textColor="@color/g_black"
                     android:drawableLeft="@drawable/ic_area"
                     android:drawableTint="@color/g_black"
@@ -122,17 +125,73 @@
                 android:textSize="@dimen/_15ssp" />
 
             <TextView
-                android:id="@+id/tvInstructions"
+                android:id="@+id/tvIngredientsTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="Ingredients - "
+                android:textSize="@dimen/_13ssp"
                 app:layout_constraintStart_toStartOf="@id/tvInstructionTitle"
                 app:layout_constraintTop_toBottomOf="@id/tvInstructionTitle"
-                android:layout_marginTop="@dimen/_3sdp"
-                android:layout_marginStart="@dimen/_3sdp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tvIngredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="• bla \n• bla \n• bla"
+                android:layout_marginTop="@dimen/_2sdp"
                 android:textSize="@dimen/_11ssp"
-                android:paddingEnd="@dimen/_20sdp"
-                android:paddingBottom="@dimen/_35sdp"
+                app:layout_constraintStart_toStartOf="@id/tvIngredientsTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvIngredientsTitle"
                 android:textColor="@color/g_black"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#80000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                app:layout_constraintTop_toBottomOf="@id/tvIngredients" />
+
+            <TextView
+                android:id="@+id/tvStepsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Steps - "
+                android:textSize="@dimen/_13ssp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="@id/tvInstructionTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvIngredients"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/tvSteps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="• bla \n• bla \n• bla"
+                android:textColor="@color/g_black"
+                android:textSize="@dimen/_11ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/tvIngredientsTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvStepsTitle" />
+
+
+            <!--            <TextView-->
+<!--                android:id="@+id/tvInstructions"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintStart_toStartOf="@id/tvInstructionTitle"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/tvInstructionTitle"-->
+<!--                android:layout_marginTop="@dimen/_3sdp"-->
+<!--                android:layout_marginStart="@dimen/_3sdp"-->
+<!--                android:textSize="@dimen/_11ssp"-->
+<!--                android:paddingEnd="@dimen/_20sdp"-->
+<!--                android:paddingBottom="@dimen/_35sdp"-->
+<!--                android:textColor="@color/g_black"/>-->
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -143,17 +202,19 @@
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|center"
+        android:layout_gravity="bottom|end"
         android:elevation="@dimen/_5sdp"
         android:padding="@dimen/_10sdp"
         app:cardCornerRadius="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
         android:layout_marginBottom="@dimen/_10sdp">
 
     <ImageView
         android:id="@+id/imgYoutube"
+        android:padding="@dimen/_4sdp"
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_30sdp"
-        android:src="@drawable/ic_youtube" />
+        android:src="@drawable/youtube_logo" />
     </androidx.cardview.widget.CardView>
 
 

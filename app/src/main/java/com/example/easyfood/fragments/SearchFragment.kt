@@ -19,6 +19,7 @@ import com.example.easyfood.viewModel.HomeViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import java.util.*
 
 class SearchFragment : Fragment(R.layout.fragment_search) {
 
@@ -66,6 +67,10 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
         }
 
         onCategoryMealItemClick()
+
+//        binding.imgSearchArrow.setOnClickListener {
+//
+//        }
     }
 
     private fun observeSearchedMealsLiveData() {

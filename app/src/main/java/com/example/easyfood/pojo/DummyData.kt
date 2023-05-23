@@ -4,6 +4,8 @@ import com.example.easyfood.R
 
 data class DummyData(val rating: String, val time: String)
 
+val numArray = arrayListOf<Int>(50, 100, 200, 300, 400, 500, 1000)
+
 val categoryImage = arrayListOf(
     R.drawable.beef,
     R.drawable.chicken,

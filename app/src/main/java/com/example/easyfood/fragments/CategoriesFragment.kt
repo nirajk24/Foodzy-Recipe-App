@@ -34,6 +34,9 @@ class CategoriesFragment : Fragment(R.layout.fragment_categories) {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentCategoriesBinding.inflate(inflater, container, false)
+
+        binding.shimmerLayoutCategories.startShimmer()
+
         return binding.root
     }
 
@@ -58,6 +61,12 @@ class CategoriesFragment : Fragment(R.layout.fragment_categories) {
     private fun observeCategoriesLiveData() {
         viewModel.observeCategoriesLiveData().observe(viewLifecycleOwner) { categories ->
             categoriesAdapter.setCategoryList(categories)
+
+            // Hide shimmer effect
+            binding.shimmerLayoutCategories.stopShimmer()
+            binding.shimmerLayoutCategories.visibility = View.GONE
+            // Make the view visible again
+            binding.categoriesMain.visibility = View.VISIBLE
         }
     }
 

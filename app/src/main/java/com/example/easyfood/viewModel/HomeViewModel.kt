@@ -89,10 +89,10 @@ class HomeViewModel(private val mealDatabase: MealDatabase) : ViewModel() {
             randomMealLiveData.postValue(randomMeal)
 
             // Hide shimmer effect
-            binding.shimmerLayout.stopShimmer()
-            binding.shimmerLayout.visibility = View.GONE
+            binding.shimmerLayoutHome.stopShimmer()
+            binding.shimmerLayoutHome.visibility = View.GONE
             // Make the view visible again
-            binding.main.visibility = View.VISIBLE
+            binding.homeMain.visibility = View.VISIBLE
 
             return
         }
@@ -107,10 +107,10 @@ class HomeViewModel(private val mealDatabase: MealDatabase) : ViewModel() {
             override fun onResponse(call: Call<MealList>, response: Response<MealList>) {
 
                 // Hide shimmer effect
-                binding.shimmerLayout.stopShimmer()
-                binding.shimmerLayout.visibility = View.GONE
+                binding.shimmerLayoutHome.stopShimmer()
+                binding.shimmerLayoutHome.visibility = View.GONE
                 // Make the view visible again
-                binding.main.visibility = View.VISIBLE
+                binding.homeMain.visibility = View.VISIBLE
 
                 // Checking if onResponse has data
                 if (response.body() != null) { // -> We have proper a response

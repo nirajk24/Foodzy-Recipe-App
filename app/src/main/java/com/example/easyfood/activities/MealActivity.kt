@@ -121,11 +121,25 @@ class MealActivity : AppCompatActivity() {
 
             mealToSave = meal  // -> saving meal instance into another var to pass to room database
 
-            // Setting up views on meal activity
+            val ingredients = "• " + meal.strIngredient1 + ": " + meal.strMeasure1 + "\n" +
+                    "• " + meal.strIngredient2 + ": " + meal.strMeasure2 + "\n" +
+                    "• " + meal.strIngredient3 + ": " + meal.strMeasure3 + "\n" +
+                    "• " + meal.strIngredient4 + ": " + meal.strMeasure4 + "\n" +
+                    "• " + meal.strIngredient5 + ": " + meal.strMeasure5 + "\n" +
+                    "• " + meal.strIngredient6 + ": " + meal.strMeasure6 + "\n" +
+                    "• " + meal.strIngredient7 + ": " + meal.strMeasure7 + "\n"
+//                    "• " + meal.strIngredient8 + ": " + meal.strMeasure8 + "\n" +
+//                    "• " + meal.strIngredient9 + ": " + meal.strMeasure9 + "\n" +
+//                    "• " + meal.strIngredient10+ ": " + meal.strMeasure10 + "\n" +
+//                    "• " + meal.strIngredient11 + ": " + meal.strMeasure11 + "\n" +
+//                    "• " + meal.strIngredient12 + ": " + meal.strMeasure12
+
+                    // Setting up views on meal activity
             binding.apply {
                 tvMealCategory.text = "Category : ${meal.strCategory}"
                 tvMealArea.text = "Area : ${meal.strArea}"
-                tvInstructions.text = meal.strInstructions.toString()
+                tvIngredients.text = ingredients.trim()
+                tvSteps.text = meal.strInstructions.toString()
             }
 
             // Setting up youtube link
@@ -142,7 +156,6 @@ class MealActivity : AppCompatActivity() {
             tvMealCategory.visibility = View.INVISIBLE
             tvMealArea.visibility = View.INVISIBLE
             imgYoutube.visibility = View.INVISIBLE
-            tvInstructions.visibility = View.INVISIBLE
         }
     }
 
@@ -154,7 +167,6 @@ class MealActivity : AppCompatActivity() {
             tvMealCategory.visibility = View.VISIBLE
             tvMealArea.visibility = View.VISIBLE
             imgYoutube.visibility = View.VISIBLE
-            tvInstructions.visibility = View.VISIBLE
         }
     }
 

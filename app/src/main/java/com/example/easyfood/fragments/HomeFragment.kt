@@ -68,7 +68,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
-        binding.shimmerLayout.startShimmer()
+
+        // Starting shimmer effect
+        binding.shimmerLayoutHome.startShimmer()
+        // Stops in HomeViewModel
 
         return binding.root
     }
