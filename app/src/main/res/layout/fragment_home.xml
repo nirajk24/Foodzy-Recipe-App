@@ -156,7 +156,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
-                        android:background="@drawable/random_meal_footer"
+                        android:background="@drawable/meal_footer_background_gradient"
                         android:orientation="vertical"
                         android:paddingTop="@dimen/_8sdp"
                         android:paddingBottom="@dimen/_4sdp">

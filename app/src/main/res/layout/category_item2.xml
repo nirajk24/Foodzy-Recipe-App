@@ -34,19 +34,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:padding="@dimen/_8sdp"
-            android:background="@drawable/random_meal_footer">
+            android:paddingVertical="@dimen/_8sdp"
+            android:background="@drawable/meal_footer_background_gradient">
 
             <TextView
                 android:id="@+id/tvCategoryName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:lines="1"
-                android:paddingHorizontal="@dimen/_4sdp"
                 android:text="Category Name"
                 android:textAlignment="center"
                 android:textColor="@color/background_color"
-                android:textSize="@dimen/_14sdp"
+                android:textSize="@dimen/_13sdp"
                 android:textStyle="bold" />
 
         </LinearLayout>
