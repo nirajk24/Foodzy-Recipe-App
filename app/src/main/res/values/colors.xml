@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#834458</color>
+    <color name="accent">#834458</color>
+    <color name="g_black">#33405f</color>
+
+    <color name="head_text_color">#D9272727</color>
+    <color name="g_gray">#E6E6E6</color>
+
+    <color name="shimmer_color">#bfbdbd</color>
+    <color name="shimmer_color_light">#E3E3E3</color>
+
+    <color name="background_color">#F4F4F4</color>
+    <color name="rv_background">#CC512D39</color>
+
+<!--    <color name="rv_background">#CC2D5E53</color>-->
+
+<!--    //#f52c56-->
+
+</resources>
