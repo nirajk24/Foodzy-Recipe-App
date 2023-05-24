@@ -1,5 +1,7 @@
 package com.example.easyfood.viewModel
 
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.View
 import androidx.lifecycle.LiveData
@@ -106,17 +108,24 @@ class HomeViewModel(private val mealDatabase: MealDatabase) : ViewModel() {
             // onResponse and onFailure method are overridden to handle all the cases
             override fun onResponse(call: Call<MealList>, response: Response<MealList>) {
 
-                // Hide shimmer effect
-                binding.shimmerLayoutHome.stopShimmer()
-                binding.shimmerLayoutHome.visibility = View.GONE
-                // Make the view visible again
-                binding.homeMain.visibility = View.VISIBLE
+
+
+
 
                 // Checking if onResponse has data
                 if (response.body() != null) { // -> We have proper a response
                     val randomMeal: Meal = response.body()!!.meals[0]
                     // Log.d("TEST", "meal id: ${randomMeal.idMeal}, name: ${randomMeal.strMeal}")
                     randomMealLiveData.value = randomMeal
+
+//                    Handler(Looper.getMainLooper()).postDelayed({
+//                        //Do something after 100ms
+//                        // Hide shimmer effect
+//                        binding.shimmerLayoutHome.stopShimmer()
+//                        binding.shimmerLayoutHome.visibility = View.GONE
+//                        // Make the view visible again
+//                        binding.homeMain.visibility = View.VISIBLE
+//                    }, 2000)
 
                     // saving randomMeal in saveState
                     saveStateRandomMeal = randomMeal

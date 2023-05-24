@@ -22,19 +22,22 @@
         <EditText
             android:id="@+id/etSearchBox"
             android:layout_width="0dp"
-            android:layout_height="@dimen/_40sdp"
+            android:layout_height="@dimen/_35sdp"
             android:layout_weight="1"
             android:background="@drawable/search_box_background"
+            android:drawableEnd="@drawable/ic_search"
             android:hint="Search Meals..."
+            android:inputType="text"
             android:paddingStart="16dp"
-            android:paddingEnd="16dp" />
-        
-        <ImageView
-            android:id="@+id/imgSearchArrow"
-            android:layout_width="@dimen/_35sdp"
-            android:layout_height="@dimen/_35sdp"
-            android:src="@drawable/baseline_arrow_forward_24"
-            android:layout_gravity="center" />
+            android:paddingEnd="16dp"
+            android:singleLine="true" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imgSearchArrow"-->
+<!--            android:layout_width="@dimen/_35sdp"-->
+<!--            android:layout_height="@dimen/_35sdp"-->
+<!--            android:src="@drawable/baseline_arrow_forward_24"-->
+<!--            android:layout_gravity="center" />-->
 
     </LinearLayout>
 

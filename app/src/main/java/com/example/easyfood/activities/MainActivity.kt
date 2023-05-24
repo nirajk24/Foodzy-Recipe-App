@@ -36,9 +36,5 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.navController
         // 3 -> Set up Nav controller with Bottom Navigation to enable Navigation
         NavigationUI.setupWithNavController(binding.btmNav, navController)
-
-
-
-
     }
 }

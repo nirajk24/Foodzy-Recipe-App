@@ -2,12 +2,15 @@ package com.example.easyfood.fragments
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -100,12 +103,16 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         onSearchItemClick()
 
-        onCategoriesSeeAllClick()
+        // Causing issue with backstack
+        // onCategoriesSeeAllClick()
+        binding.tvCategoriesSeeAll.visibility = View.GONE
 //
     }
 
     private fun onCategoriesSeeAllClick() {
-
+        binding.tvCategoriesSeeAll.setOnClickListener {
+            it.findNavController().navigate(R.id.action_homeFragment_to_categoriesFragment)
+        }
     }
 
     private fun onSearchItemClick() {
@@ -132,6 +139,17 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 meal.strCategory + " • " + meal.strArea + " • " + dummyData[rand].time
 
             this.randomMeal = meal  // -> storing the value of current random meal
+
+
+            // Hiding shimmer effect and show main layout after data is received
+            Handler(Looper.getMainLooper()).postDelayed({
+                //Do something after 100ms
+                // Hide shimmer effect
+                binding.shimmerLayoutHome.stopShimmer()
+                binding.shimmerLayoutHome.visibility = View.GONE
+                // Make the view visible again
+                binding.homeMain.visibility = View.VISIBLE
+            }, 200)
         }
     }
 

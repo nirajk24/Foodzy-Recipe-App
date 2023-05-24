@@ -49,7 +49,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 
         prepareRecyclerView()
 
-        binding.imgSearchArrow.setOnClickListener { searchMeals() }
+//        binding.imgSearchArrow.setOnClickListener { searchMeals() }
 
         observeSearchedMealsLiveData()
 

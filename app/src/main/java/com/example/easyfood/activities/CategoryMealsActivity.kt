@@ -3,6 +3,8 @@ package com.example.easyfood.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -28,6 +30,7 @@ class CategoryMealsActivity : AppCompatActivity() {
         binding = ActivityCategoryMealsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Starting shimmer effect - Hidden in observeMealsByCategoryLiveData() in this activity
         binding.shimmerLayoutMeals.startShimmer()
 
         // Preparing Recycler view to show data
@@ -72,12 +75,13 @@ class CategoryMealsActivity : AppCompatActivity() {
 
             binding.tvCategoryCount.text = categoryName
 
-            // Hide shimmer effect
-            binding.shimmerLayoutMeals.stopShimmer()
-            binding.shimmerLayoutMeals.visibility = View.GONE
-            // Make the view visible again
-            binding.mealsMain.visibility = View.VISIBLE
-
+            Handler(Looper.getMainLooper()).postDelayed({
+                // Hide shimmer effect
+                binding.shimmerLayoutMeals.stopShimmer()
+                binding.shimmerLayoutMeals.visibility = View.GONE
+                // Make the view visible again
+                binding.mealsMain.visibility = View.VISIBLE
+            }, 100)
         })
     }
 
