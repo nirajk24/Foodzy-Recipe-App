@@ -3,6 +3,7 @@ package com.example.easyfood.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.GridLayoutManager
@@ -26,6 +27,8 @@ class CategoryMealsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCategoryMealsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.shimmerLayoutMeals.startShimmer()
 
         // Preparing Recycler view to show data
         prepareRecyclerView()
@@ -67,7 +70,13 @@ class CategoryMealsActivity : AppCompatActivity() {
         categoryMealsMvvm.observeMealsLiveData().observe(this, Observer { mealsList ->
             categoryMealsAdapter.setMealsList(mealsList)
 
-            binding.tvCategoryCount.text = "${categoryName} : ${mealsList.size.toString()}"
+            binding.tvCategoryCount.text = categoryName
+
+            // Hide shimmer effect
+            binding.shimmerLayoutMeals.stopShimmer()
+            binding.shimmerLayoutMeals.visibility = View.GONE
+            // Make the view visible again
+            binding.mealsMain.visibility = View.VISIBLE
 
         })
     }

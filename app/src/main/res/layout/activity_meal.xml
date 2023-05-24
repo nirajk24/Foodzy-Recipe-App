@@ -152,7 +152,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginHorizontal="@dimen/_8sdp"
-                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_6sdp"
                 app:layout_constraintTop_toBottomOf="@id/tvIngredients" />
 
             <TextView
@@ -168,30 +168,17 @@
 
             <TextView
                 android:id="@+id/tvSteps"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="• bla \n• bla \n• bla"
                 android:textColor="@color/g_black"
                 android:textSize="@dimen/_11ssp"
+                android:layout_marginHorizontal="@dimen/_8sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@id/tvIngredientsTitle"
                 app:layout_constraintTop_toBottomOf="@id/tvStepsTitle" />
-
-
-            <!--            <TextView-->
-<!--                android:id="@+id/tvInstructions"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                app:layout_constraintStart_toStartOf="@id/tvInstructionTitle"-->
-<!--                app:layout_constraintTop_toBottomOf="@id/tvInstructionTitle"-->
-<!--                android:layout_marginTop="@dimen/_3sdp"-->
-<!--                android:layout_marginStart="@dimen/_3sdp"-->
-<!--                android:textSize="@dimen/_11ssp"-->
-<!--                android:paddingEnd="@dimen/_20sdp"-->
-<!--                android:paddingBottom="@dimen/_35sdp"-->
-<!--                android:textColor="@color/g_black"/>-->
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

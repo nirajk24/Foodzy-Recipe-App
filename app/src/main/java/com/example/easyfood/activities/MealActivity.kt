@@ -156,6 +156,11 @@ class MealActivity : AppCompatActivity() {
             tvMealCategory.visibility = View.INVISIBLE
             tvMealArea.visibility = View.INVISIBLE
             imgYoutube.visibility = View.INVISIBLE
+
+            tvSteps.visibility = View.INVISIBLE
+            tvStepsTitle.visibility = View.INVISIBLE
+            tvIngredients.visibility = View.INVISIBLE
+            tvIngredientsTitle.visibility = View.INVISIBLE
         }
     }
 
@@ -167,6 +172,11 @@ class MealActivity : AppCompatActivity() {
             tvMealCategory.visibility = View.VISIBLE
             tvMealArea.visibility = View.VISIBLE
             imgYoutube.visibility = View.VISIBLE
+
+            tvSteps.visibility = View.VISIBLE
+            tvStepsTitle.visibility = View.VISIBLE
+            tvIngredients.visibility = View.VISIBLE
+            tvIngredientsTitle.visibility = View.VISIBLE
         }
     }
 

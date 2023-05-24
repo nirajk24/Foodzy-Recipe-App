@@ -65,8 +65,8 @@ class MealBottomSheetFragment : BottomSheetDialogFragment(R.layout.fragment_meal
                 .into(binding.imgBottomSheet)
 
             binding.apply {
-                tvBtmSheetArea.text = meal.strArea
-                tvBtmSheetCategory.text = meal.strCategory
+                tvBtmSheetArea.text = " " + meal.strArea
+                tvBtmSheetCategory.text = " " + meal.strCategory
                 tvBtmSheetMealName.text = meal.strMeal
             }
 

@@ -60,12 +60,26 @@ class CategoryMealsAdapter
 //        getMealDetailByID(mealList[position].idMeal)
 
 
+        RetrofitInstance.api.getMealDetailsById(mealList[position].idMeal).enqueue(object : Callback<MealList>{
+            override fun onResponse(call: Call<MealList>, response: Response<MealList>) {
+                val meal = response.body()?.meals?.first()
+                meal?.let {
+                    holder.binding.tvMealCategory.text = response.body()!!.meals[0].strCategory
+                    holder.binding.tvMealArea.text = response.body()!!.meals[0].strArea
+                }
+            }
+
+            override fun onFailure(call: Call<MealList>, t: Throwable) {
+                Log.d("TEST", t.message.toString())
+            }
+
+        })
+
 
         holder.binding.apply {
             tvMealName.text = mealList[position].strMeal
 
-//            tvMealCategory.text = currentMeal!!.strCategory.toString()
-//            tvMealArea.text = currentMeal!!.strArea.toString()
+
             tvMealTime.text = dummyData[position].time
             tvMealRating.text = dummyData[position].rating
         }
