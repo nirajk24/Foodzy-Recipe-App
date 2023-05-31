@@ -57,11 +57,11 @@ class FavoritesAdapter: RecyclerView.Adapter<FavoritesAdapter.FavoritesViewHolde
             .load(meal.strMealThumb)
             .into(holder.binding.imgMeal)
 
-        val rand = Random(10).nextInt(0, 6)
+        val rand = Random.nextInt( 6)
 
         holder.binding.apply {
             tvMealName.text = meal.strMeal
-            tvMealRating.text = dummyData[position].rating +" (" + numArray[rand].toString() + ")"
+            tvMealRating.text = dummyData[position].rating +" (" + numArray[rand].toString() + "+)"
             tvMealCategory.text = "Category: " + meal.strCategory
             tvMealArea.text = "Area: " + meal.strArea
             tvMealTime.text = dummyData[position].time
@@ -71,6 +71,5 @@ class FavoritesAdapter: RecyclerView.Adapter<FavoritesAdapter.FavoritesViewHolde
         holder.itemView.setOnClickListener {
             onItemClick.invoke(meal)
         }
-
     }
 }

@@ -12,11 +12,13 @@ import com.example.easyfood.pojo.Meal
 import com.example.easyfood.pojo.MealList
 import com.example.easyfood.pojo.MealsByCategory
 import com.example.easyfood.pojo.dummyData
+import com.example.easyfood.pojo.numArray
 import com.example.easyfood.retrofit.RetrofitInstance
 import com.example.easyfood.viewModel.CategoryMealsViewModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import kotlin.random.Random
 
 class CategoryMealsAdapter
     : RecyclerView.Adapter<CategoryMealsAdapter.CategoryMealsViewHolder>() {
@@ -75,13 +77,14 @@ class CategoryMealsAdapter
 
         })
 
+        val rand = Random.nextInt(6)
 
         holder.binding.apply {
             tvMealName.text = mealList[position].strMeal
 
-
             tvMealTime.text = dummyData[position].time
-            tvMealRating.text = dummyData[position].rating
+            tvMealRating.text = " " + dummyData[position].rating +" (" + numArray[rand].toString() + "+)"
+
         }
 
         // lambda variable for onClick method
