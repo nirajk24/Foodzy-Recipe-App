@@ -23,7 +23,7 @@
             app:collapsedTitleTextColor="@color/white"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
 
-            
+
             <ImageView
                 android:id="@+id/imgMealDetails"
                 android:layout_width="match_parent"

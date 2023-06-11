@@ -49,9 +49,6 @@ class MealBottomSheetFragment : BottomSheetDialogFragment(R.layout.fragment_meal
         observeBottomSheetMeal()
         onBottomSheetDialogClick()
     }
-    
-
-
 
     // Data to pass to MealActivity onCLick
     private var mealName: String? = null

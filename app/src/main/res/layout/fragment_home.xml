@@ -94,12 +94,6 @@
                     android:paddingEnd="16dp"
                     app:drawableEndCompat="@drawable/ic_search" />
 
-                <!--                <ImageView-->
-                <!--                    android:id="@+id/imgSearchArrow"-->
-                <!--                    android:layout_width="@dimen/_35sdp"-->
-                <!--                    android:layout_height="@dimen/_35sdp"-->
-                <!--                    android:layout_gravity="center"-->
-                <!--                    android:src="@drawable/baseline_arrow_forward_24" />-->
 
             </LinearLayout>
         </LinearLayout>

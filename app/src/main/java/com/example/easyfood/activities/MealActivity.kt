@@ -179,8 +179,4 @@ class MealActivity : AppCompatActivity() {
             tvIngredientsTitle.visibility = View.VISIBLE
         }
     }
-
-
-
-
 }
