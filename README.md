@@ -16,11 +16,15 @@ Foodzy is an Android recipe app built using Kotlin that allows users to explore 
 
 ## Screenshots
 
-![Screenshot 1](screenshot1.jpg)
-![Screenshot 2](screenshot2.jpg)
-![Screenshot 3](screenshot3.jpg)
-![Screenshot 4](screenshot4.jpg)
-![Screenshot 5](screenshot5.jpg)
+<div style="display: flex;">
+  <img src="/images/screenshot1.jpg" width="250" alt="Screenshot 1">
+  <img src="/images/screenshot2.jpg" width="250" alt="Screenshot 2">
+  <img src="/images/screenshot3.jpg" width="250" alt="Screenshot 3">
+</div>
+<div style="display: flex;">
+  <img src="/images/screenshot4.jpg" width="250" alt="Screenshot 4">
+  <img src="/images/screenshot5.jpg" width="250" alt="Screenshot 5">
+</div>
 
 ## Technical Details
 
@@ -34,12 +38,14 @@ Foodzy is an Android recipe app built using Kotlin that allows users to explore 
 - [Glide](https://bumptech.github.io/glide/): A fast and efficient image loading library for Android.
 
 ## Installation
-Follow the Gdrive link to install the application - 
+Follow the Gdrive link to install the application - https://drive.google.com/file/d/1hpvqQdU99e1EnQf3knVvNOg4W_bA4a2K/view?usp=drive_link
 
 ## Contact
 If you have any questions, suggestions, or feedback regarding the Foodzy Recipe App, please feel free to contact me:
 
 Email: kumar.bgp.niraj@gmail.com
+
 LinkedIn: www.linkedin.com/in/nirajk24
+
 Thank you for your interest in Foodzy! I hope you find the app helpful and enjoyable. Happy cooking!
 
