@@ -1,6 +1,6 @@
 # Foodzy - Recipe App
 
-![Foodzy Logo](/images/foodzy_logo.png)
+<img src="/images/logo.png" width="100" alt="Foodzy-logo">
 
 Foodzy is an Android recipe app built using Kotlin that allows users to explore a wide range of recipes from various cuisines. The app fetches recipe data from TheMealDB API using the Retrofit library and features a beautiful and user-friendly UI. One of the key features of Foodzy is the favorite section, which enables users to save their preferred recipes for offline access, thanks to the Room library. The app follows the MVVM architecture to maintain a clean and organized codebase.
 
