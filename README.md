@@ -16,7 +16,9 @@ Foodzy is an Android recipe app built using Kotlin that allows users to explore 
 
 ## Screenshots
 
-<div style="display: flex;">
+<img src="/images/Final(Crop).png" alt="Screenshot 1">
+
+<!--- <div style="display: flex;">
   <img src="/images/screenshot1.jpg" width="250" alt="Screenshot 1">
   <img src="/images/screenshot2.jpg" width="250" alt="Screenshot 2">
   <img src="/images/screenshot3.jpg" width="250" alt="Screenshot 3">
@@ -24,7 +26,7 @@ Foodzy is an Android recipe app built using Kotlin that allows users to explore 
 <div style="display: flex;">
   <img src="/images/screenshot4.jpg" width="250" alt="Screenshot 4">
   <img src="/images/screenshot5.jpg" width="250" alt="Screenshot 5">
-</div>
+</div> --->
 
 ## Technical Details
 
